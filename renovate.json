@@ -1,0 +1,12 @@
+{
+  "$schema": "https://docs.renovatebot.com/renovate-schema.json",
+  "regexManagers": [
+    {
+      "fileMatch": ["(^|/)reproduce.sh"],
+      "matchStrings": [
+        "# !renovate depName=(?<depName>.*?) datasource=(?<datasource>.*?)( versioning=(?<versioning>.*?))?( extractVersion=(?<extractVersion>.*?))?\\s[A-Z0-9_]+_VERSION\\s*=\\s*[\"']?(?<currentValue>.*?)[\"']?\\s"
+      ],
+      "versioningTemplate": "{{#if versioning}}{{{versioning}}}{{else}}semver{{/if}}"
+    }
+  ]
+}
