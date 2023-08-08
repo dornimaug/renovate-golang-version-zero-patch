@@ -1,7 +1,7 @@
 #!/bin/sh
 
 # !renovate depName=go datasource=golang-version
-GOLANG_VERSION="1.19.5"
+GOLANG_VERSION="1.21.0"
 
 mkdir -p build
 
